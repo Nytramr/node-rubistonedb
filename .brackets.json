@@ -1,0 +1,9 @@
+{
+  "jslint.options": {
+    "vars": true,
+    "node": true,
+    "plusplus": true,
+    "ass": true,
+    "nomen": true
+  }
+}

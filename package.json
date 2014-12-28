@@ -1,0 +1,33 @@
+{
+  "name": "node-rubistonedb",
+  "version": "0.0.1",
+  "description": "ORM for Node",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "mocha --reporter=Spec --bail test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Nytramr/node-rubistonedb.git"
+  },
+  "keywords": [
+    "ORM",
+    "database"
+  ],
+  "author": "Martin Rubinsztein",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nytramr/node-rubistonedb/issues"
+  },
+  "homepage": "https://github.com/Nytramr/node-rubistonedb",
+  "dependencies": {
+    "object-assign": "^2.0.0",
+    "promise": "^6.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1",
+    "should": "^4.4.1",
+    "chai": "^1.10.0",
+    "chai-as-promised": "^4.1.1"
+  }
+}

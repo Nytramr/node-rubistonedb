@@ -1,0 +1,8 @@
+Entity
+======
+
+## Methods
+
+### fetch
+
+### save
