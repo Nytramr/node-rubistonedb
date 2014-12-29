@@ -126,15 +126,21 @@ describe ('Rubistone DB', function () {
     });
     
     it('Should initialize the json data file', function () {
-      return driver.init().should.not.be.rejectedWith(Error);
+      return driver.init().should.eventually.not.be.rejectedWith(Error);
     });
     
     it('Should insert the first entity', function () {
       var e1 = new entity();
       
       e1.init({num1: 100});
-      return driver.insert(e1).should.not.be.rejectedWith(Error);
+      return driver.insert(e1).should.eventually.not.be.rejectedWith(Error);
     });
+    
+    after(function (){
+      console.log('after');
+      return driver.close();
+    });
+    
   });
 //  after(function () {
 //    console.log('FINISH');
