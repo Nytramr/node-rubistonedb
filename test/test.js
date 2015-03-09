@@ -1,6 +1,7 @@
 var path = require('path');
 var fs = require('fs');
 
+var Promise = require('promise');
 var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 
@@ -134,6 +135,16 @@ describe ('Rubistone DB', function () {
       
       e1.init({num1: 100});
       return driver.insert(e1).should.eventually.not.be.rejectedWith(Error);
+    });
+    
+    it('Should insert and update an entity', function () {
+      var e1 = new entity();
+      e1.init({num1: 100});
+      
+      return driver.insert(e1).then(function(ett){
+        e1.num1 = 330;
+        return driver.update(e1);
+      }).should.eventually.not.be.rejectedWith(Error);
     });
     
     after(function (){

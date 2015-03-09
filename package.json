@@ -1,5 +1,5 @@
 {
-  "name": "node-rubistonedb",
+  "name": "rubistone-db",
   "version": "0.0.1",
   "description": "ORM for Node",
   "main": "lib/main.js",
